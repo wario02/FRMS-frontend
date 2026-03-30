@@ -16,7 +16,7 @@ if (!$farm) {
     ?>
     <section class="hero">
         <div class="hero-box" style="border-left: 4px solid #e74c3c;">
-            <h3>Farm Profile Missing ok</h3>
+            <h3>Farm Profile Missing</h3>
             <p>We couldn't find a farm profile linked to your account. You need a farm profile to access the dashboard metrics.</p>
             <div style="margin-top: 20px;">
                 <a href="/frontend/settings.php" class="btn">Go to Settings</a>
