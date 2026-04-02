@@ -17,7 +17,6 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="form-card">
     <h3>Platform Configuration</h3>
-    <p class="muted">Update branding, registration controls, notifications and display settings for the system.</p>
     <form action="/backend/handlers/admin_settings.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="save_settings">

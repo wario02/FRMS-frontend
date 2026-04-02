@@ -30,7 +30,6 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="form-card">
     <h3><?= $editInventory ? 'Edit Inventory Item' : 'Add Inventory Item' ?></h3>
-    <p class="muted">Track seed, fertilizer, feed, machinery and supplies with reorder levels.</p>
     <form action="/backend/handlers/inventory.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="save_inventory">

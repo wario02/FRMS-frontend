@@ -44,10 +44,10 @@ $appName = app_name($pdo);
     <div class="auth-card">
         <section class="auth-side">
             <h1><?= e($appName) ?></h1>
+            
         </section>
         <section class="auth-form">
             <h2>Login</h2>
-            <p class="muted">Enter your account details to continue.</p>
 
             <?php if (isset($noFarmError)): ?>
                 <div class="alert alert-error"><?= e($noFarmError) ?></div>
@@ -68,8 +68,14 @@ $appName = app_name($pdo);
                     Password
                     <input type="password" name="password" placeholder="••••••••" required>
                 </label>
+
+                <!-- ADDED FORGOT PASSWORD LINK -->
+                <a href="/frontend/forgot_password.php" style="display:block; margin-top:10px;">
+                    Forgot Password?
+                </a>
+
                 <button type="submit">Sign In</button>
-                <a class="btn secondary" href="/frontend/register.php">Create Account</a>
+                <p>Don't have an account? <a style="text-decoration: none; "href="/frontend/register.php">Create Account</a></p>
             </form>
         </section>
     </div>

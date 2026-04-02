@@ -5,7 +5,6 @@ $user = current_user();
 $pdo = getPDO();
 ensure_bootstrap_data($pdo);
 $appName = app_name($pdo);
-$subtitleText = get_setting($pdo, 'dashboard_welcome', 'Digitized crop, livestock, finance and inventory records.');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,18 +44,11 @@ $subtitleText = get_setting($pdo, 'dashboard_welcome', 'Digitized crop, livestoc
                 </nav>
             <?php endif; ?>
         </div>
-        <div class="meta-note">
-            <strong>Stack</strong>
-            <span>Frontend: HTML/CSS/JS</span>
-            <span>Backend: PHP + MySQL</span>
-            <span>Security: Sessions + CSRF + Hashing</span>
-        </div>
     </aside>
     <main class="main-content">
         <header class="topbar">
             <div>
                 <h2><?= e($pageTitle ?? $appName) ?></h2>
-                <p class="subtitle"><?= e($subtitleText) ?></p>
             </div>
             <?php if ($user): ?>
                 <div class="user-chip">

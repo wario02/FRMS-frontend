@@ -97,7 +97,6 @@ $notices = get_notices($pdo, $audience, 4);
 <section class="card-grid">
     <div class="card"><h3>Crop Records</h3><div class="metric"><?= e((string) ($metrics['crop_count'] ?? 0)) ?></div></div>
     <div class="card"><h3>Livestock Records</h3><div class="metric"><?= e((string) ($metrics['livestock_count'] ?? 0)) ?></div></div>
-    <div class="card"><h3>Total Yield (KG)</h3><div class="metric"><?= e(number_format((float) ($metrics['total_yield'] ?? 0), 2)) ?></div></div>
     <div class="card"><h3>Inventory Items</h3><div class="metric"><?= e((string) ($metrics['inventory_count'] ?? 0)) ?></div></div>
     <div class="card"><h3>Open Tasks</h3><div class="metric"><?= e((string) ($metrics['open_tasks'] ?? 0)) ?></div></div>
     <div class="card"><h3>Net Position</h3><div class="metric"><?= e(format_money($pdo, (float) ($metrics['total_income'] ?? 0) - (float) ($metrics['total_expense'] ?? 0))) ?></div></div>

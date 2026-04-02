@@ -10,7 +10,7 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="form-card">
     <h3>Create User</h3>
-    <p class="muted">Admins can create farmer, officer and administrator accounts directly.</p>
+    <p class="muted">Admins can create farmer and administrator accounts directly.</p>
     <form action="/backend/handlers/admin_users.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="create_user">

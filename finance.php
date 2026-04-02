@@ -49,7 +49,6 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="form-card">
     <h3><?= $editTransaction ? 'Edit Transaction' : 'Add Transaction' ?></h3>
-    <p class="muted">Capture sales, labour, transport, feed and other income/expense items.</p>
     <form action="/backend/handlers/finance.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="save_transaction">

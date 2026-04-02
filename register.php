@@ -26,12 +26,6 @@ $registrationEnabled = is_self_registration_enabled($pdo);
     <div class="auth-card">
         <section class="auth-side">
             <h1>Create Account</h1>
-            <p>Register a secure FRMS profile and attach one primary farm for operational records.</p>
-            <ul>
-                <li>The first registered user becomes the system administrator.</li>
-                <li>Later registrations are farmer accounts, unless an admin creates users manually.</li>
-                <li>Admins can disable public self-registration from system settings.</li>
-            </ul>
         </section>
         <section class="auth-form">
             <h2>Register</h2>
@@ -63,7 +57,7 @@ $registrationEnabled = is_self_registration_enabled($pdo);
                         </label>
                         <label>
                             Farm Name
-                            <input type="text" name="farm_name" placeholder="Optional for admin/officer first account">
+                            <input type="text" name="farm_name" required>
                         </label>
                     </div>
                     <div class="form-row">
@@ -77,17 +71,27 @@ $registrationEnabled = is_self_registration_enabled($pdo);
                         </label>
                     </div>
                     <div class="form-row">
-                        <label>
-                            Password
-                            <input type="password" name="password" minlength="8" required>
-                        </label>
-                        <label>
-                            Confirm Password
-                            <input type="password" name="confirm_password" minlength="8" required>
-                        </label>
-                    </div>
+
+<label>
+    Password
+    <input 
+        type="password" 
+        name="password" 
+        minlength="8" 
+        placeholder="e.g. StrongPass1!" 
+        required
+    >
+</label>
+    <label>
+        Confirm Password
+        <input type="password" name="confirm_password" minlength="8" required>
+    </label>
+    <small style="color:#666; font-size:12px;">
+    Password must include uppercase, lowercase, number, and special character.
+</small>
+</div>
                     <button type="submit">Register</button>
-                    <a class="btn secondary" href="/frontend/index.php">Back to Login</a>
+                   <p>Already have an account? <a style="text-decoration: none;" href="/frontend/index.php">Back to Login</a></p>
                 </form>
             <?php endif; ?>
         </section>

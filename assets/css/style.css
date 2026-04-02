@@ -374,3 +374,20 @@ table th {
         align-items: flex-start;
     }
 }
+
+/* ========================= */
+/* ADDED IMAGE BELOW TITLE   */
+/* ========================= */
+
+.auth-side h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 180px;
+    margin-top: 15px;
+    background-image: url('/frontend/assets/images/farm-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}

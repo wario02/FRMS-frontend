@@ -31,10 +31,8 @@ $healthRecords = fetch_all($healthStmt);
 $pageTitle = 'Livestock Management';
 require_once __DIR__ . '/includes/header.php';
 ?>
-
 <section class="form-card">
     <h3><?= $editLivestock ? 'Edit Livestock Record' : 'Add Livestock Record' ?></h3>
-    <p class="muted">Track animal profiles including breed, tag number, gender and status.</p>
     <form action="/backend/handlers/livestock.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="save_livestock">
@@ -95,7 +93,6 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="form-card">
     <h3>Add Health / Production Record</h3>
-    <p class="muted">Log health status, vaccination, treatment and feed cost entries.</p>
     <form action="/backend/handlers/livestock.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="save_health">

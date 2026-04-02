@@ -34,7 +34,6 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="form-card">
     <h3><?= $editCrop ? 'Edit Crop Record' : 'Add New Crop Record' ?></h3>
-    <p class="muted">Track planting schedules, crop status, acreage and notes.</p>
     <form action="/backend/handlers/crops.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="save_crop">
@@ -91,7 +90,6 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="form-card">
     <h3>Add Harvest Record</h3>
-    <p class="muted">Capture actual yield and revenue after harvesting.</p>
     <form action="/backend/handlers/crops.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="save_harvest">

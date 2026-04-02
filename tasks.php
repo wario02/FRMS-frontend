@@ -28,7 +28,6 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="form-card">
     <h3><?= $editTask ? 'Edit Task' : 'Create Task' ?></h3>
-    <p class="muted">Plan feeding, planting, vaccination, harvesting and maintenance activities.</p>
     <form action="/backend/handlers/tasks.php" method="POST">
         <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
         <input type="hidden" name="action" value="save_task">
